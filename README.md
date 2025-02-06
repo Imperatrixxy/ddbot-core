@@ -1,4 +1,4 @@
-#DDbot-core
+# ddBot-core
 
 This is the core version of my Discord bot, featuring only the command handler and a few commands to get started.
 

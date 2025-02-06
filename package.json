@@ -5,8 +5,6 @@
   "type": "module",
   "main": "./src/index.js",
   "scripts": {
-    "tsc": "tsc -w --outDir distro --rootDir src --skipLibCheck",
-    "npmp": "tsc --outDir distro --rootDir src --skipLibCheck && npm publish"
   },
   "keywords": [],
   "author": "The Imp",
@@ -14,10 +12,6 @@
   "dependencies": {
     "discord.js": "^14.17.3",
     "dotenv": "^16.3.1",
-    "imp-commands": "file:../imp-commands-v2",
     "mongoose": "^8.9.5"
   },
-  "devDependencies": {
-    "typescript": "^5.3.3"
-  }
 }

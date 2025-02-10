@@ -13,11 +13,13 @@ export default function (message, handler) {
     const args = content.slice(prefix.length).split(/ +/g);
     const commandName = args.shift().toLowerCase();
 
+    //If any of the arguments are mentions, extrapolate the ID
     for (let i = 0; i < args.length; i++) {
         if (args[i].startsWith('<@') && args[i].endsWith('>')) {
             args[i] = args[i].slice(2, -1);
 
-            if (args[i].startsWith('!')) {
+            //If it's a role mention, it also has a "&" symbol
+            if (args[i].startsWith('&')) {
                 args[i] = args[i].slice(1);
             }
         }

@@ -114,7 +114,7 @@ export default async function({
         await command.execute({ message, interaction, client, handler, reply, guild, channel, member, user, args, text, options });
     } catch (error) {
         console.error(error);
-        const errorMsg = { content: 'There was an error while executing this command.', flags: MessageFlags.Ephemeral };
+        const errorMsg = { content: `There was an error while executing the ${commandName} command.`, flags: MessageFlags.Ephemeral };
         if(interaction) {
             if (interaction.replied || interaction.deferred) {
                 await interaction.followUp(errorMsg);
